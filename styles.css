@@ -38,10 +38,11 @@
     justify-content: space-between;
     padding: 0 1.5rem;
   }
+
   .nav-icon {
     font-size: 1.5rem;
   }
-  .cart-btn {
+    .cart-btn {
     position: relative;
     cursor: pointer;
   }
