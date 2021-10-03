@@ -8,24 +8,28 @@
     <title>Comfy House</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/hamburger.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="navbar">
         <div class="navbar-center">
-            <img src="./images/logo.svg" alt="store logo" style="padding-left: 30rem;" />
+            <a href="index.html"><img src="./images/logo.svg" alt="store logo"
+                    style="padding-left: 30rem; margin-right: 25rem;" /></a>
+            <div id="user-btn">
+                <button class="nav-icon-1 user-btn" style="border: none;">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
             <div class="cart-btn">
-                <span class="nav-icon">
+                <span class="nav-icon-2">
                     <i class="fas fa-cart-plus"></i>
                 </span>
                 <div class="cart-items">0</div>
             </div>
         </div>
-
         <div class="menu-wrap">
             <input type="checkbox" class="toggler">
             <div class="hamburger">
@@ -35,10 +39,10 @@
                 <div>
                     <div>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="index.html">Services</a></li>
+                            <li><a href="index.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -46,15 +50,71 @@
         </div>
     </nav>
 
+    <!-- Login Panel -->
+    <div id="user-log" class="wrapper">
+        <span class="close-log"><i class="far fa-window-close"></i></span>
+        <div class="title-text">
+            <div class="title login">
+                Log in Form
+            </div>
+            <div class="title signup">
+                Sign up Form
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Log in</label>
+                <label for="signup" class="slide signup">Sign up</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="#" class="login">
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Log in">
+                        <!-- <button onclick="store()" type="button"></button> -->
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="">Sign up now</a>
+                    </div>
+                </form>
+                <form action="#" class="signup">
+                    <div class="field">
+                        <input class="email" type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input class="password" type="password" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Confirm password" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <button onclick="store()" type="button"><input type="submit" value="Sign up"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- hero -->
     <header class="hero">
         <div class="banner">
             <h1 class="banner-title">furniture collection</h1>
-            <!-- <button class="banner-btn">shop now</button> -->
-            <a href="#products" class="banner-btn">shop now</a>
+            <a href="#products" class="banner-btn" style="text-decoration: none;">shop now</a>
         </div>
     </header>
-
 
     <!-- products -->
     <section id="products">
@@ -86,20 +146,7 @@
             <div class="cart-content">
                 <!-- cart item -->
                 <!-- <div class="cart-item">
-                    <img src="./images/product-1.jpeg" alt="product" />
-                    <div>
-                        <h4>queen bed</h4>
-                        <h5>$9.00</h5>
-                        <span class="remove-item">remove</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-chevron-up"></i>
-                        <p class="item-amount">
-                            1
-                        </p>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div> -->
+                        </div> -->
                 <!-- cart item -->
             </div>
             <div class="cart-footer">
@@ -112,7 +159,7 @@
     <!-- contentful -->
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
     <!--  javascript -->
-    <script src="/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

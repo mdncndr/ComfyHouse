@@ -8,7 +8,65 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
+
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+
+const userLog = document.querySelector("#user-log");
+const closeLog = document.querySelector(".close-log");
+const userBtn = document.querySelector("#user-btn");
+
 let cart = [];
+
+
+
+// login
+userBtn.onclick = function () {
+    userLog.style.visibility = "visible";
+}
+closeLog.onclick = function () {
+    userLog.style.visibility = "hidden";
+}
+
+signupBtn.onclick = (() => {
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (() => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+});
+signupLink.onclick = (() => {
+    signupBtn.click();
+    return false;
+});
+
+
+// Store datas
+
+function store() {
+    let inputEmail = document.querySelector(".email");
+    let inputPassword = document.querySelector(".password");
+
+    localStorage.setItem("email", inputEmail.value);
+    localStorage.setItem("password", inputPassword.value);
+
+    let storedEmail = localStorage.getItem('email');
+    let storedPassword = localStorage.getItem('password');
+
+
+    if (inputEmail.value !== storedEmail || inputPassword.value !== storedPassword) {
+        alert('ERROR');
+    } else {
+        alert('You are loged in.');
+        // window.open("index.html");
+        window.location.reload(true);
+    }
+
+}
 
 // products
 class Products {
@@ -16,12 +74,6 @@ class Products {
         try {
             let result = await fetch("products.json");
             let data = await result.json();
-            // let contentful = await client.getEntries({
-            //   content_type: "comfyHouseProducts"
-            // });
-            // console.log(contentful.items);
-            // console.log(data);
-
             let products = data.items;
             products = products.map(item => {
                 const { title, price } = item.fields;

@@ -1,4 +1,5 @@
-
+@import "/css/hamburger.css";
+@import "/css/login.css";
 :root {
     --primaryColor: #f09d51;
     --mainWhite: #fff;
@@ -39,7 +40,8 @@
     padding: 0 1.5rem;
   }
 
-  .nav-icon {
+  .nav-icon-1,
+  .nav-icon-2 {
     font-size: 1.5rem;
   }
     .cart-btn {
@@ -59,7 +61,7 @@
   /* --------------- Hero ---------------- */
 .hero {
     min-height: calc(100vh - 60px);
-    background: url("./images/hero-bcg.jpeg") center/cover no-repeat;
+    background: url("/images/hero-bcg.jpeg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,10 +130,10 @@
     letter-spacing: var(--mainSpacing);
     font-weight: bold;
     transition: var(--mainTransition);
-    transform: translateY(0);
+    transform: translateX(101%);
     cursor: pointer;
-   
   }
+
   .bag-btn:hover {
     color: var(--mainWhite);
   }
@@ -186,7 +188,7 @@
     height: 100%;
     overflow: scroll;
     z-index: 3;
-    background: rgb(231, 226, 221);
+    background: #e7e2dd;
     padding: 1.5rem;
     transition: var(--mainTransition);
     transform: translateX(100%);
