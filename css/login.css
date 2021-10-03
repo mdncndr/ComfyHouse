@@ -23,7 +23,7 @@
   transition:all 0.3s linear;
   background: #e7e2dd;
   z-index: 3;
-  visibility:hidden;
+  display: none;
 }
 
 .wrapper .title-text{

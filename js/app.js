@@ -25,10 +25,10 @@ let cart = [];
 
 // login
 userBtn.onclick = function () {
-    userLog.style.visibility = "visible";
+    userLog.style.display = "block";
 }
 closeLog.onclick = function () {
-    userLog.style.visibility = "hidden";
+    userLog.style.display = "none";
 }
 
 signupBtn.onclick = (() => {
