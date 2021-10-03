@@ -15,18 +15,19 @@
 <body>
     <!-- navbar -->
     <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="./images/logo.svg" alt="store logo" /></a>
+        </div>
         <div class="navbar-center">
-            <a href="index.html"><img src="./images/logo.svg" alt="store logo"
-                    style="padding-left: 30rem; margin-right: 25rem;" /></a>
-            <div id="user-btn">
-                <button class="nav-icon-1 user-btn" style="border: none;">
+            <div id="user-btn" style="cursor: pointer;margin-right: 15px;">
+                <a class="nav-icon-1 " style="border: none;">
                     <i class="fas fa-user"></i>
-                </button>
+                </a>
             </div>
             <div class="cart-btn">
-                <span class="nav-icon-2">
+                <a class="nav-icon-2">
                     <i class="fas fa-cart-plus"></i>
-                </span>
+                </a>
                 <div class="cart-items">0</div>
             </div>
         </div>
@@ -51,59 +52,61 @@
     </nav>
 
     <!-- Login Panel -->
-    <div id="user-log" class="wrapper">
-        <span class="close-log"><i class="far fa-window-close"></i></span>
-        <div class="title-text">
-            <div class="title login">
-                Log in Form
+    <div>
+        <div id="user-log" class="wrapper">
+            <span class="close-log"><i class="far fa-window-close"></i></span>
+            <div class="title-text">
+                <div class="title login">
+                    Log in Form
+                </div>
+                <div class="title signup">
+                    Sign up Form
+                </div>
             </div>
-            <div class="title signup">
-                Sign up Form
-            </div>
-        </div>
-        <div class="form-container">
-            <div class="slide-controls">
-                <input type="radio" name="slide" id="login" checked>
-                <input type="radio" name="slide" id="signup">
-                <label for="login" class="slide login">Log in</label>
-                <label for="signup" class="slide signup">Sign up</label>
-                <div class="slider-tab"></div>
-            </div>
-            <div class="form-inner">
-                <form action="#" class="login">
-                    <div class="field">
-                        <input type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot password?</a>
-                    </div>
-                    <div class="field btn">
-                        <div class="btn-layer"></div>
-                        <input type="submit" value="Log in">
-                        <!-- <button onclick="store()" type="button"></button> -->
-                    </div>
-                    <div class="signup-link">
-                        Not a member? <a href="">Sign up now</a>
-                    </div>
-                </form>
-                <form action="#" class="signup">
-                    <div class="field">
-                        <input class="email" type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="field">
-                        <input class="password" type="password" placeholder="Password" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Confirm password" required>
-                    </div>
-                    <div class="field btn">
-                        <div class="btn-layer"></div>
-                        <button onclick="store()" type="button"><input type="submit" value="Sign up"></button>
-                    </div>
-                </form>
+            <div class="form-container">
+                <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Log in</label>
+                    <label for="signup" class="slide signup">Sign up</label>
+                    <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                    <form action="#" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Log in">
+                            <!-- <button onclick="store()" type="button"></button> -->
+                        </div>
+                        <div class="signup-link">
+                            Not a member? <a href="">Sign up now</a>
+                        </div>
+                    </form>
+                    <form action="#" class="signup">
+                        <div class="field">
+                            <input class="email" type="text" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                            <input class="password" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Confirm password" required>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <button onclick="store()" type="button"><input type="submit" value="Sign up"></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

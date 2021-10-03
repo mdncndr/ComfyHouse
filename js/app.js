@@ -44,7 +44,6 @@ signupLink.onclick = (() => {
     return false;
 });
 
-
 // Store datas
 
 function store() {
@@ -62,8 +61,9 @@ function store() {
         alert('ERROR');
     } else {
         alert('You are loged in.');
-        // window.open("index.html");
-        window.location.reload(true);
+
+        window.open("index.html");
+
     }
 
 }

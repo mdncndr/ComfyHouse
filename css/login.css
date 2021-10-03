@@ -11,6 +11,7 @@
   background: #f09d51;
   color: #fff;
 }
+
 .wrapper{
   position: fixed;
   overflow: scroll;
@@ -24,6 +25,14 @@
   background: #e7e2dd;
   z-index: 3;
   display: none;
+
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 30vw;
+    min-width: 450px;
+  }
 }
 
 .wrapper .title-text{
